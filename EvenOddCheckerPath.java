@@ -28,16 +28,17 @@ public class EvenOddCheckerPath {
         assertEquals("2 là số chẵn.", result.get(1));
     }
 
-    // 4. Gặp cả nhánh if và else lặp nhiều lần (n = 5)
+    // 4. Gặp cả nhánh if và else lặp nhiều lần (n = 6)
     @Test
     public void testMixedEvenOdd() {
-        List<String> result = EvenOddChecker.getEvenOddList(5);
+        List<String> result = EvenOddChecker.getEvenOddList(6);
         assertEquals(5, result.size());
         assertEquals("1 là số lẻ.", result.get(0));
         assertEquals("2 là số chẵn.", result.get(1));
         assertEquals("3 là số lẻ.", result.get(2));
         assertEquals("4 là số chẵn.", result.get(3));
         assertEquals("5 là số lẻ.", result.get(4));
+        // Kiểm tra số 6 không có trong danh sách vì chỉ kiểm tra từ 1 đến n-1
     }
 
     // 5. Gặp đủ nhiều nhánh, kiểm tra biên lớn hơn (n = 10)
